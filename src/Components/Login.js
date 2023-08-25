@@ -10,8 +10,16 @@ const Login = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     // Kiểm tra và xử lý logic đăng nhập ở đây
-
-    navigate('/home'); // Điều hướng đến trang Home sau khi đăng nhập thành công
+    const loggeduser = JSON.parse(localStorage.getItem("user"));
+    if (
+input.email === loggeduser.email && input.password === loggeduser.password) 
+    {
+    navigate('/home'); // Điều hướng đến trang Home sau khi đăng nhập thành công   
+}
+    else{
+      alert("Wrong Email or Password");
+    }
+   
   };
   return (
     <>
