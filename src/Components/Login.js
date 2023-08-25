@@ -14,6 +14,7 @@ const Login = () => {
     if (
 input.email === loggeduser.email && input.password === loggeduser.password) 
     {
+      localStorage.setItem("loggedin", true)
     navigate('/home'); // Điều hướng đến trang Home sau khi đăng nhập thành công   
 }
     else{
